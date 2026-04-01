@@ -1,0 +1,151 @@
+--[[local player = game.Players.LocalPlayer
+local targetPlayer = game.Players.SevkaYT12
+player.Character.HumanoidRootPart.CFrame = targetPlayer.Character.HumanoidRootPart.CFrame
+]]
+
+--[[local player = game.Players.LocalPlayer
+player.Character.HumanoidRootPart.CFrame = CFrame.new(105.449921, 189.080399, -739.92334)
+--[[
+-128.903381, 198.714966, -528.553345 Winter_Event
+37.7923203, 189.003784, -324.183746 Daily_Challenge
+35.2341423, 188.994995, -384.63739 Challenge_Act1
+-42.1226578, 198.186584, -563.479675 Play_Arena
+105.449921, 189.080399, -739.92334 Raid
+256.373901, 200.813293, -818.997681 Summon
+]]
+--player.Character.HumanoidRootPart.CFrame = workspace._road["1"].CFrame Телепорт к 1 дорожке
+-- workspace._BASES.player.LANES["1"].final 
+-- game:GetService("Players").LocalPlayer.PlayerGui.UnitUpgrade.Primary.Container.Main.Main.Buttons.Upgrade
+function coordStr(str)
+    local coord = {}
+    for number in string.gmatch(str, "[%+%-]?%d+%.?%d*") do
+	    table.insert(coord, number)
+    end
+    return coord
+end
+local player = game.Players.LocalPlayer
+
+-- Move
+local Move = {} -- Создаем таблицу для класса Move
+Move.__index = Move -- Устанавливаем метатаблицу
+
+function Move:new(coordinates)
+    local obj = setmetatable({}, Move) -- Создаем новый объект
+    obj.coordinates = coordinates -- Устанавливаем поле name
+    return obj
+end
+
+function Move:TP()
+    if player.Character:FindFirstChild("HumanoidRootPart") then
+        local coord = coordStr(self.coordinates)
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(coord[1], coord[2], coord[3])
+    else
+        print("У персонажа нет HumanoidRootPart.")
+    end
+end
+function Move:Walk()
+    if player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.Humanoid.WalkSpeed = 28
+        local coord = coordStr(self.coordinates)
+        print(coord[1], coord[2], coord[3])
+        local targetPosition = Vector3.new(coord[1], coord[2], coord[3]) -- Замените на нужные вам координаты
+        -- Получаем игрока и его персонажа
+        player.Character.Humanoid:MoveTo(targetPosition)
+        -- Отслеживаем завершение движения
+        player.Character.Humanoid.MoveToFinished:Wait()
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(coord[1], coord[2], coord[3])
+        print("Персонаж достиг цели!")
+    else
+        print("У персонажа нет HumanoidRootPart.")
+    end
+end
+-- Move
+
+-- Move->Lobby
+local Lobby = setmetatable({}, Move) -- Lobby наследует от Move
+Lobby.__index = Lobby
+
+function Lobby:new(coordinates)
+    local obj = Move:new(coordinates) -- Вызываем конструктор родительского класса
+    setmetatable(obj, Lobby) -- Устанавливаем метатаблицу для объекта
+    return obj
+end
+local Summon = Lobby:new("256.373901, 200.813293, -818.997681")
+local Winter_Event = Lobby:new("-128.903381, 198.714966, -528.553345")
+local Challenge_Act1 = Lobby:new("35.2341423, 188.994995, -384.63739")
+local Daily_Challenge = Lobby:new("37.7923203, 189.003784, -324.183746")
+local Play_Arena = Lobby:new("-42.1226578, 198.186584, -563.479675")
+local Raid = Lobby:new("105.449921, 189.080399, -739.92334")
+local ShopEscanor = Lobby:new("341.6510009765625, 186.72999572753906, -577.8380126953125")
+local Relics = Lobby:new("315.06280517578125, 187.38099670410156, -611.1290893554688")
+local Break_Limit = Lobby:new("422.0045166015625, 196.102783203125, -504.7589111328125")
+local Paradox_Gojo = Lobby:new("315.5320129394531, 196.55599975585938, -384.83599853515625")
+local Paradox_Gojo_Eyes = Lobby:new("-119649.5625, -46.639984130859375, -139.6750030517578")
+local Griffith = Lobby:new("23051.6328125, 590.8927001953125, -22893.955078125")
+local Berserk = Lobby:new("81.23799896240234, 186.06500244140625, -700.0640258789062")
+local Gifting = Lobby:new("273.7752685546875, 197.07652282714844, -829.0805053710938")
+local Soul_Orb = Lobby:new("4460.712890625, 277.11834716796875, -2874.370849609375")
+local Toad_Sensei = Lobby:new("300.3740234375, 196.97238159179688, -749.4444580078125")
+local Copy_Ninja = Lobby:new("278.1101379394531, 197.5207977294922, -810.0591430664062")
+local Killer = Lobby:new("1.491446852684021, 202.1300048828125, -524.9609985351562")
+local L = Lobby:new("228.88587951660156, 199.71826171875, -810.7855834960938")
+local Present_Rookie_Hunter = Lobby:new("82.1451187133789, 195.33251953125, -501.8049621582031")
+local Create_Guild = Lobby:new("411.7583923339844, 195.59170532226562, -388.7408142089844")
+local Holidays_Event = Lobby:new("157.3459930419922, 186.73800659179688, -506.6510009765625")
+local Holloween_Event = Lobby:new("-108.4647216796875, 195.4338836669922, -561.1851806640625")
+local Crowd = Lobby:new("88.24762725830078, 195.4153289794922, -410.7789611816406")
+local Infinity_Mansion_Muzo = Lobby:new("349.60101318359375, 186.3797149658203, -494.2644958496094")
+local Infinity_Mansion_Nakimo = Lobby:new("12372.572265625, 155.240234375, 3193.1728515625")
+local Level_Melostones = Lobby:new("390.96771240234375, 195.6657257080078, -687.7066650390625")
+local Raid_Shop = Lobby:new("87.05799865722656, 186.0279998779297, -744.2080078125")
+local Cursed_King = Lobby:new("23003.076171875, 17.768293380737305, -10.136686325073242")
+local Chunks = Lobby:new("80.80559539794922, 195.3314971923828, -544.4456176757812")
+local Traits = Lobby:new("421.25604248046875, 195.33250427246094, -548.94580078125")
+local Tournament = Lobby:new("157.0751953125, 187.81982421875, -556.6041259765625")
+local Missions = Lobby:new("186.5311279296875, 186.91358947753906, -455.1239013671875")
+local Lucil = Lobby:new("316.645569, 187.109467, -445.61969")
+local Guild_Event = Lobby:new("388.467194, 195.590714, -362.725006")
+local LeaderBoards = Lobby:new("403.585144, 197.437592, -676.538513")
+local Wish_Girl = Lobby:new("3.44110298, 195.089661, -533.990479")
+local Reroll_Potential = Lobby:new("468.441467, 195.665482, -510.411652")
+local Shop_Time = Lobby:new("218.964844, 196.79245, -731.087036")
+local Illusionist = Lobby:new("4460.71289, 282.916321, -2891.87378")
+-- Move->Lobby
+
+-- Move->Arena
+local Arena = setmetatable({}, Move) -- Arena наследует от Move
+Arena.__index = Arena
+
+function Arena:new(coordinates)
+    local obj = Move:new(coordinates) -- Вызываем конструктор родительского класса
+    setmetatable(obj, Arena) -- Устанавливаем метатаблицу для объекта
+    return obj
+end
+-- Move->Arena
+Summon:Walk()
+
+local Players = game:GetService("Players")
+local Camera = workspace.CurrentCamera
+
+-- Определяем целевые координаты
+local targetPosition = Vector3.new(-128.903381, 198.714966, -528.553345) -- Замените на нужные вам координаты
+
+-- Функция для отвязывания камеры и телепортации
+local function teleportCamera()
+    local player = Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+    local sevePosition = Camera.CFrame
+    -- Устанавливаем CameraType на Scriptable
+    Camera.CameraType = Enum.CameraType.Scriptable
+
+    -- Устанавливаем CFrame камеры на целевую позицию
+    Camera.CFrame = CFrame.new(targetPosition + Vector3.new(0, 10, 0), targetPosition)
+    wait(1)
+    Camera.CFrame = sevePosition
+    Camera.CameraType = Enum.CameraType.Custom
+end
+
+-- Запускаем функцию
+teleportCamera()
+
+
