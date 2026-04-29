@@ -1,0 +1,107 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="5E3k27kDq_3xMGdUh5-V">
+    <mxGraphModel dx="1664" dy="924" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QtP8IyJz0GPhg239P0lv-18" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Источники данных" vertex="1">
+          <mxGeometry height="54" width="198" x="827" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-19" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Пользователь" vertex="1">
+          <mxGeometry height="54" width="161" x="580" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-20" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=#999999;fontColor=light-dark(#333333,#cccccc);perimeterSpacing=2;rounded=1;" value="1.0 Интеграция данных" vertex="1">
+          <mxGeometry height="54" width="233" x="420" y="648" as="geometry" />
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-21" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);rounded=1;" value="2.0 Фильтрация и форматирование" vertex="1">
+          <mxGeometry height="78" width="260" x="407" y="936" as="geometry" />
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-22" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);rounded=1;" value="3.0 Прогноз" vertex="1">
+          <mxGeometry height="54" width="147" x="267" y="1272" as="geometry" />
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-23" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);rounded=1;" value="4.0 Визуализация и отчёты" vertex="1">
+          <mxGeometry height="54" width="259" x="460" y="1272" as="geometry" />
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-24" parent="1" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Хранилище сырых данных" vertex="1">
+          <mxGeometry height="86" width="210" x="432" y="776" as="geometry" />
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-25" parent="1" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Хранилище очищенных данных" vertex="1">
+          <mxGeometry height="110" width="215" x="258" y="1088" as="geometry" />
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-26" parent="1" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Модели прогнозирования" vertex="1">
+          <mxGeometry height="85" width="204" x="238.5" y="1450" as="geometry" />
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-27" edge="1" parent="1" source="QtP8IyJz0GPhg239P0lv-18" style="curved=0;startArrow=none;endArrow=block;entryX=1;entryY=0.5;rounded=0;fixDash=0;strokeColor=default;entryDx=0;entryDy=0;exitX=0.01;exitY=0.667;exitDx=0;exitDy=0;exitPerimeter=0;" target="QtP8IyJz0GPhg239P0lv-20" value="Сырые данные">
+          <mxGeometry relative="1" x="-0.0181" y="11" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="830" y="680" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-28" edge="1" parent="1" source="QtP8IyJz0GPhg239P0lv-20" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="QtP8IyJz0GPhg239P0lv-24" value="Загрузка данных">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-29" edge="1" parent="1" source="QtP8IyJz0GPhg239P0lv-24" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="QtP8IyJz0GPhg239P0lv-21" value="Извлечение данных">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-30" edge="1" parent="1" source="QtP8IyJz0GPhg239P0lv-21" style="curved=0;startArrow=none;endArrow=block;exitX=0.085;exitY=0.993;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;" value="Очищенные данные">
+          <mxGeometry relative="1" x="-0.0021" y="-58" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="430" y="1087" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-31" edge="1" parent="1" source="QtP8IyJz0GPhg239P0lv-25" style="curved=0;startArrow=none;endArrow=block;exitX=0.145;exitY=1;rounded=0;exitDx=0;exitDy=-2.9;exitPerimeter=0;" value="Данные для анализа">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="290" y="1270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-32" edge="1" parent="1" source="QtP8IyJz0GPhg239P0lv-26" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=0;entryX=0.5;entryY=1;rounded=0;entryDx=0;entryDy=0;exitDx=0;exitDy=0;exitPerimeter=0;" target="QtP8IyJz0GPhg239P0lv-22" value="Алгоритмы и параметры">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-33" edge="1" parent="1" source="QtP8IyJz0GPhg239P0lv-22" style="curved=0;startArrow=none;endArrow=block;exitX=1;exitY=0.11;rounded=0;entryX=0.709;entryY=0.978;entryDx=0;entryDy=0;entryPerimeter=0;" target="QtP8IyJz0GPhg239P0lv-25" value="Результаты прогноза">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="420" y="1200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-34" edge="1" parent="1" style="curved=0;startArrow=none;endArrow=block;rounded=0;" value="Данные для отчёта">
+          <mxGeometry relative="1" x="0.1734" y="58" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="471" y="1183" as="sourcePoint" />
+            <mxPoint x="473" y="1270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-35" edge="1" parent="1" style="curved=0;startArrow=none;endArrow=block;entryX=0.5;entryY=1;rounded=0;entryDx=0;entryDy=0;" target="QtP8IyJz0GPhg239P0lv-19" value="Интерактивный дашборд">
+          <mxGeometry relative="1" x="0.6375" y="71" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="661" y="1270" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-36" edge="1" parent="1" source="QtP8IyJz0GPhg239P0lv-19" style="curved=0;startArrow=none;endArrow=block;rounded=0;exitX=0.789;exitY=0.975;exitDx=0;exitDy=0;exitPerimeter=0;" value="Запрос на отчёт">
+          <mxGeometry relative="1" x="-0.0447" y="51" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="680" y="1190" as="sourcePoint" />
+            <mxPoint x="707" y="1270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QtP8IyJz0GPhg239P0lv-37" edge="1" parent="1" source="QtP8IyJz0GPhg239P0lv-19" style="curved=0;startArrow=none;endArrow=block;exitX=0.435;exitY=0;entryX=0.931;entryY=1.002;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="QtP8IyJz0GPhg239P0lv-21" value="Параметры фильтрации">
+          <mxGeometry relative="1" x="-0.0231" y="-74" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
