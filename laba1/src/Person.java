@@ -10,11 +10,7 @@ public class Person {
     private float balance;
 
     public Person() {
-        this.age = 20;
-        this.gender = "женщина";
-        this.name = "Катя";
-        this.bag = new ArrayList<>(List.of("Телефон", "Помада", "Перцовка"));
-        this.balance = 1000.00f;
+        this(20, "женщина", "Катя", List.of("Телефон", "Помада", "Перцовка"), 1000.00f);
     }
 
     public Person(int age, String gender, String name, List<String> bag, float balance) {
@@ -25,7 +21,7 @@ public class Person {
         this.bag = new ArrayList<>(bag);
         this.balance = balance;
     }
-
+    
     public Person(Person other) {
         validateAll(other.age, other.name, other.bag, other.balance);
         this.age = other.age;
@@ -95,7 +91,7 @@ public class Person {
 
     public void setBag(List<String> bag) {
         validateBag(bag);
-        this.bag = new ArrayList<>(bag); // Защитная копия
+        this.bag = new ArrayList<>(bag);
     }
 
     public void setBalance(float balance) {
@@ -115,7 +111,9 @@ public class Person {
     public List<String> getBag() {
         return new ArrayList<>(this.bag);
     }
-
+    public String getGender(){
+        return this.gender;
+    }
     public float getBalance() {
         return this.balance;
     }
