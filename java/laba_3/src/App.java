@@ -10,7 +10,7 @@ public class App {
         };
     }
 
-    public static void error(IllegalArgumentException  e){
+    private static void error(IllegalArgumentException  e){
         System.out.println(e.getMessage());
     } 
 }
