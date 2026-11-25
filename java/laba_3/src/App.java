@@ -7,7 +7,7 @@ public class App {
         }
         catch(IllegalArgumentException  e){
             error(e);
-        };
+        }
     }
 
     private static void error(IllegalArgumentException  e){
